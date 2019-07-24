@@ -11,28 +11,10 @@
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-	<script language="JavaScript">
-	<!-- 
-	function Remote() {
-	var remote = null
-	remote = window.open('','vRemote','toolbar=yes, location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,fullscreen=yes')
-	if (remote != null) {
-	if (remote.opener == null) {
-	remote.opener = self
-	}
-	remote.location.href = 'http://www.seusite.com.br'
-	}
-	} 
-
-	Remote();
-	history.go(-1); 
-
-	// --> 
-	</script>
-
         <a-assets>
-             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/01.gltf"></a-asset-item>
-             <a-asset-item id="animated-asset2" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
+             <!-- <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/01.gltf"></a-asset-item> -->
+             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
+	     <a-asset-item id="animated-asset2" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
 	     <a-asset-item id="animated-asset3" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
 	     <a-asset-item id="animated-asset4" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
 	     <a-asset-item id="animated-asset5" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
