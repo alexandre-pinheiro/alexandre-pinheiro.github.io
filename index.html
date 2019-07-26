@@ -1,102 +1,25 @@
-<!doctype HTML>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    </head>
-    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    
-    <body style='margin : 0px; overflow: hidden;'>
-        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-
-        <a-assets>
-             <!-- <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item> -->
-             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/02.gltf"></a-asset-item>
-	     <a-asset-item id="animated-asset2" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	     <a-asset-item id="animated-asset3" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	     <a-asset-item id="animated-asset4" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	     <a-asset-item id="animated-asset5" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	     <a-asset-item id="animated-asset6" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	     <a-asset-item id="animated-asset7" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	     <a-asset-item id="animated-asset8" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	     <a-asset-item id="animated-asset9" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	     <a-asset-item id="animated-asset10" src="https://raw.githubusercontent.com/alexandre-pinheiro/alexandre-pinheiro.github.io/master/faca.gltf"></a-asset-item>	
-	</a-assets>
-
-        <a-marker id="animated-marker" type='barcode' value='1'>
-            <a-entity
-                gltf-model="#animated-asset"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-	<a-marker id="animated-marker2" type='barcode' value='2'>
-            <a-entity
-                gltf-model="#animated-asset2"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-	<a-marker id="animated-marker3" type='barcode' value='3'>
-            <a-entity
-                gltf-model="#animated-asset3"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-	<a-marker id="animated-marker4" type='barcode' value='4'>
-            <a-entity
-                gltf-model="#animated-asset4"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-	<a-marker id="animated-marker5" type='barcode' value='5'>
-            <a-entity
-                gltf-model="#animated-asset5"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-	<a-marker id="animated-marker6" type='barcode' value='6'>
-            <a-entity
-                gltf-model="#animated-asset6"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-	<a-marker id="animated-marker7" type='barcode' value='7'>
-            <a-entity
-                gltf-model="#animated-asset7"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-	<a-marker id="animated-marker8" type='barcode' value='8'>
-            <a-entity
-                gltf-model="#animated-asset8"
-                scale="0.2">
-            </a-entity>
-        </a-marker>
-
-	<a-marker id="animated-marker9" type='barcode' value='9'>
-            <a-entity
-                gltf-model="#animated-asset9"
-                scale="2">
-            </a-entity>
-        </a-marker>
-	
-	<a-marker id="animated-marker10" type='barcode' value='10'>
-            <a-entity
-                gltf-model="#animated-asset10"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-        <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
-        <a-entity camera></a-entity>
-        </a-scene>
-    </body>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Vr Test01</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/teste vr.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Vr Test01</div>
+      </div>
+    </div>
+  </body>
 </html>
