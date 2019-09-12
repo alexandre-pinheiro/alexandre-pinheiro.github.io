@@ -1,0 +1,25 @@
+# Point105-AR.OBJExporter MTL File
+# Material Count: 3
+
+newmtl "09 - Default"
+Kd 0.9701 0.9701 0.9701 
+Ke 0.0000 0.0000 0.0000 
+d 1
+Tr 0
+illum 1
+
+newmtl "08 - Default"
+Kd 0.2180 0.0429 0.0195 
+Ke 0.0000 0.0000 0.0000 
+d 1
+Tr 0
+illum 1
+
+newmtl "Material #25"
+Kd 1.0000 1.0000 1.0000 
+Ke 0.0000 0.0000 0.0000 
+d 1
+Tr 0
+illum 1
+map_Kd Material__25_diffuse.jpeg
+
